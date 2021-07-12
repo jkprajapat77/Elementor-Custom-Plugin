@@ -1,0 +1,96 @@
+/**********************
+* Mansonry Grid css
+**********************/
+.masonry-grid > * {
+  break-inside: avoid;
+}
+
+.masonry-grid {
+  display: column;
+  columns: 4;
+  padding: 2rem;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  min-height: 100vh;
+
+  @supports (grid-template-rows: masonry) {
+    .masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: masonry;
+      align-items: start;
+      align-tracks: stretch;
+    }
+  }
+
+  .masonry-item{
+    padding: .5rem 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 3em rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+}
+
+/***********************
+  *Grid css
+************************/
+[class*=elemntor-grid-]>[class*=elementor-col-1], [class*=elemntor-grid_]>[class*=elementor-col-1], [class~=elemntor-grid]>[class*=elementor-col-1] {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-2], [class*=elemntor-grid_]>[class*=elementor-col-2], [class~=elemntor-grid]>[class*=elementor-col-2] {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-3], [class*=elemntor-grid_]>[class*=elementor-col-3], [class~=elemntor-grid]>[class*=elementor-col-3] {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-4], [class*=elemntor-grid_]>[class*=elementor-col-4], [class~=elemntor-grid]>[class*=elementor-col-4] {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-5], [class*=elemntor-grid_]>[class*=elementor-col-5], [class~=elemntor-grid]>[class*=elementor-col-5] {
+    flex-basis: 20%;
+    max-width: 20%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-6], [class*=elemntor-grid_]>[class*=elementor-col-6], [class~=elemntor-grid]>[class*=elementor-col-6] {
+    flex-basis: 16.66666%;
+    max-width: 16.66666%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-7], [class*=elemntor-grid_]>[class*=elementor-col-7], [class~=elemntor-grid]>[class*=elementor-col-7] {
+    flex-basis: 14.285714%;
+    max-width: 14.285714%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-8], [class*=elemntor-grid_]>[class*=elementor-col-8], [class~=elemntor-grid]>[class*=elementor-col-8] {
+    flex-basis: 12.5%;
+    max-width: 12.5%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-9], [class*=elemntor-grid_]>[class*=elementor-col-9], [class~=elemntor-grid]>[class*=elementor-col-9] {
+    flex-basis: 11.1111%;
+    max-width: 11.1111%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-10], [class*=elemntor-grid_]>[class*=elementor-col-10], [class~=elemntor-grid]>[class*=elementor-col-10] {
+    flex-basis: 10%;
+    max-width: 10%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-11], [class*=elemntor-grid_]>[class*=elementor-col-11], [class~=elemntor-grid]>[class*=elementor-col-11] {
+    flex-basis: 9.0909%;
+    max-width: 9.0909%;
+}
+[class*=elemntor-grid-]>[class*=elementor-col-12], [class*=elemntor-grid_]>[class*=elementor-col-12], [class~=elemntor-grid]>[class*=elementor-col-12] {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+}
+
+
+
+
+
+[class*=elemntor-grid-], [class*=elemntor-grid_], [class~=elemntor-grid] {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -.5rem;
+}
